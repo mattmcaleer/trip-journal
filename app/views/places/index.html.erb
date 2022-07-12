@@ -1,0 +1,5 @@
+<% @places.order("name asc").each do |p| %>
+  <ul>
+    <li><%= p.name %></li>
+  </ul>
+<% end %>

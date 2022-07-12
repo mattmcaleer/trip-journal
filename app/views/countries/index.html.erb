@@ -1,0 +1,5 @@
+<% @countries.each do |c| %>
+  <ul>
+    <%= link_to c country_path(c.name) %>
+  </ul>
+<% end %>

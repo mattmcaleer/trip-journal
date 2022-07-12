@@ -1,0 +1,9 @@
+<h2>Trip Journal</h2>
+
+<% @trips.each do |p| %>
+  <div>
+  <%= p.date %>,
+  <%= p.details %>,
+  <%= p.place_name %>
+  </div>
+<% end %>

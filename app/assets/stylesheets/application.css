@@ -13,3 +13,43 @@
  *= require_tree .
  *= require_self
  */
+
+ .active {
+  font-weight: bold;
+ }
+
+ .navbar {
+  display: flex;
+  justify-content: center;
+ }
+
+ .nav-item {
+  float: left;
+  list-style: none;
+ }
+
+ body {
+  font-family: Arial, Helvetica, sans-serif;
+ }
+
+.content {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+.form {
+ margin-top: 60px;
+}
+
+ul {
+  list-style-position: inside;
+}
+
+
