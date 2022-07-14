@@ -1,3 +1,4 @@
 <%= @trip.place_name %><br>
 <%= @trip.date %><br>
 <%= @trip.details %><br>
+<%= button_to "Delete trip", trip_path(@trip), method: :delete, data: { confirm: 'Are you sure?' } %>

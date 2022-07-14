@@ -1,4 +1,5 @@
-<h1>Hi, <%= @user.username %></h1>
+<h2>Hi, <%= @user.username %></h2>
+<%= link_to 'add a trip', new_trip_path %>
 <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
   <input type=submit value='logout'>
 <% end %>

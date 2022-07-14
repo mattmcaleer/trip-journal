@@ -1,9 +1,7 @@
-<h2>Trip Journal</h2>
-
 <% @trips.each do |p| %>
-  <div>
+  <div class='trip-list-item'>
+  <%= link_to p.place_name, trip_path(p) %>,
   <%= p.date %>,
   <%= p.details %>,
-  <%= p.place_name %>
   </div>
 <% end %>
