@@ -1,0 +1,12 @@
+<div class="form">
+<%= form_for @trip do |f| %>
+  <%= f.label :place_name %>
+  <%= f.text_field :place_name %><br>
+  <%= f.label :date %>
+  <%= f.text_field :date %><br>
+  <%= f.label :details %>
+  <%= f.text_area :details %><br>
+
+  <%= f.submit %>
+<% end %>
+</div>
