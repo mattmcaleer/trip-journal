@@ -1,7 +1,10 @@
 <% @trips.each do |p| %>
-  <div class='trip-list-item'>
-  <%= link_to p.place_name, trip_path(p) %>,
-  <%= p.date %>,
-  <%= p.details %>,
-  </div>
+  <%= link_to trip_path(p) do %>
+    <div class='trip-list-item'>
+      <h3 class='trip-list-text'>
+      <%= p.place_name %>,
+      <%= p.date %>
+      </h3>
+    </div>
+  <% end %>
 <% end %>

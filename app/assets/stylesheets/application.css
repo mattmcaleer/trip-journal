@@ -47,7 +47,7 @@ h1 {
 
 .login-signup {
   position: fixed;
-  right: 20px;
+  right: 30px;
   top: 10px;
   display: inline;
   background-color: white;
@@ -124,16 +124,29 @@ input, textarea {
 }
 
 .trip-list-item {
-  background-color: rgb(232, 234, 205);
+  background-color: #f8f4eb;
   border-radius: 10px;
   height: 400px;
   width: 400px;
-  margin-left: 50%;
-  margin-right: 50%;
+  margin-bottom: 4px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  display: inline-block;
+  position: relative; 
 }
 
 .trip-list-item:hover {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-} 
+  cursor: default;
+  text-decoration: none;
+  margin: 0;
+}
+
+.trip-info {
+  background-color: #f8f4eb;
+  border-radius: 10px;
+  height: 400px;
+  width: 1000px;
+  display: inline-block;
+  position: relative; 
+}
 
