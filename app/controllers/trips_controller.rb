@@ -10,7 +10,8 @@ class TripsController < ApplicationController
 
   def create
     @trip = Trip.new(trip_params)
-    if @trip.save!
+    if @trip.valid? 
+      @trip.save!
       redirect_to @trip
     else
       render "new"
@@ -42,7 +43,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:trip).permit(:place_name, :date, :details)
+    params.require(:trip).permit(:place_name, :date, :details, :image)
   end
 
 end

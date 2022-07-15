@@ -1,9 +1,15 @@
+<% if @trip.errors.any? %>
+<% @trip.errors.full_messages.each do |message|%>
+  <p><%= message %></p><br>
+<%end%>
+<%end%>
+
 <div class="form">
 <%= form_for @trip do |f| %>
-  <%= f.text_field :place_name, placeholder: "where?" %><br>
+  <%= f.text_field :place_name, placeholder: "where?" %>
   <%= f.date_select :date %><br>
+  <%= f.file_field :image, accept: 'image/png, image/gif, image/jpeg' %><br>
   <%= f.text_area :details, class: "textarea", placeholder: "details" %><br>
-
   <%= f.submit %>
 <% end %>
 </div>

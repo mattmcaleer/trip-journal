@@ -1,6 +1,7 @@
 <% @trips.each do |p| %>
   <%= link_to trip_path(p) do %>
     <div class='trip-list-item'>
+      <% p.image %>
       <h3 class='trip-list-text'>
       <%= p.place_name %>,
       <%= p.date %>
