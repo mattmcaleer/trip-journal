@@ -2,6 +2,7 @@
   <%= link_to trip_path(p) do %>
     <div class='trip-list-item'>
       <h3 class='trip-list-text'>
+      <img class="thumb" <%= p.image.present? ? image_tag(url_for(p.image)) : nil %><br>
       <%= p.place_name %>,
       <%= p.date %>
       </h3>

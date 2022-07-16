@@ -14,35 +14,17 @@
  *= require_self
  */
 
- .active {
-  text-decoration: underline;
- }
+.active {
+  background-color: lightgray;
+}
 
- .navbar {
+.navbar {
   display: flex;
   justify-content: center;
   width: 100%;
   top: 0;
   left: 0;
   position: fixed;
-  box-shadow: 3px 3px;
- }
-
- .nav-item {
-  float: left;
-  list-style: none;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-h1 {
-  position: fixed;
-  left: 20px;
-  top: 10px;
-  display: inline;
-  list-style: none;
-  background-color: white;
-  color: black;
 }
 
 .login-signup {
@@ -67,13 +49,13 @@ h1 {
   justify-content: center;
   background-color: #a1c6d9;
   border-radius: 10px;
-  margin-top: 100px;
+  margin-top: 60px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 100px;
   padding-bottom: 100px;
   width: 1300px;
-  height: 350px;
+  height: 380px;
   text-align: center;
   overflow: scroll;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
@@ -150,18 +132,30 @@ input, textarea {
   position: relative; 
 }
 
-.dropdown {
-  float: left;
-  overflow: hidden;
+.menu {
+  position: fixed;
+  right: 60px;
+  margin: 14px;
+  display: inline;
+  list-style: none;
+  background-color: white;
+  color: black;
 }
 
-.dropdown .dropdown-button {
-  font-size: 16px;
+h1 {
+  position: absolute;
+  left: 30px;
+  margin: 10px;
+  display: inline;
+  list-style: none;
+  background-color: white;
+  color: black;
+}
+
+.menu .dropdown-button {
   border: none;
-  outline: none;
   padding: 14px 16px;
   background-color: inherit;
-  font-family: inherit;
   margin: 0;
 }
 
@@ -169,24 +163,34 @@ input, textarea {
   display: none;
   position: absolute;
   background-color: white;
-  min-width: 160px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  right: 0px;
+}
+
+
+.nav-item {
+  list-style: none;
+  width: 160px;
+  text-align: center;
 }
 
 .dropdown-content a {
-  float: none;
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
   display: block;
-  text-align: left;
+  padding: 10px;
 }
 
 .dropdown-content a:hover {
   background-color: #ddd;
+  text-decoration: none;
+  cursor: default;
 }
 
-.dropdown:hover .dropdown-content {
+.menu:hover .dropdown-content {
   display: block;
+}
+
+.thumb {
+  height: 300px;
+  width: 300px;
 }

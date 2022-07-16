@@ -13,9 +13,8 @@
   <body>
     <nav class="navbar">
       <h1>Trip Journal</h1>
-        <div class="dropdown">
-          <button class="dropdown-button">Dropdown
-          </button>
+        <div class="menu">
+          <button class="dropdown-button">MENU</button>
           <div class="dropdown-content">
             <li class="nav-item <%= active_class(new_trip_path) %>">
               <%= link_to "New Trip", new_trip_path, class: 'nav-link' %>
@@ -26,12 +25,13 @@
             <li class="nav-item <%= active_class(places_path) %>">
               <%= link_to "Places I've Visited", places_path, class: 'nav-link' %>
             </li>
+            <li class="nav-item <%= active_class(root_path) %>">
+              <%= link_to "Login/Signup", root_path, class: 'nav-link' %>
+            </li>
           </div>
         </div>
         <ul>
-          <%= link_to root_path do %>
-            <li class='login-signup'>login/signup</li>
-          <% end %>
+
         </ul>
     </nav>
 
