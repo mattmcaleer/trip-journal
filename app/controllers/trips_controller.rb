@@ -1,15 +1,16 @@
 class TripsController < ApplicationController
+  before_action :require_logged_in
 
   def index
-    @trips = Trip.all
+    @trips = Trip.where(:user_id => current_user.id)
   end
   
   def new
-    @trip = Trip.new
+    @trip = current_user.trips.build
   end
 
   def create
-    @trip = Trip.new(trip_params)
+    @trip = current_user.trips.new(trip_params)
     if @trip.valid? 
       @trip.save!
       redirect_to @trip
@@ -43,7 +44,7 @@ class TripsController < ApplicationController
   private
 
   def trip_params
-    params.require(:trip).permit(:place_name, :date, :details, :image)
+    params.require(:trip).permit(:place_name, :date, :details, :image, :user_id)
   end
 
 end

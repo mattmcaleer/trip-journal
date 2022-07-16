@@ -1,7 +1,7 @@
 <% if @trip.errors.any? %>
-<% @trip.errors.full_messages.each do |message|%>
-  <p><%= message %></p><br>
-<%end%>
+  <% @trip.errors.full_messages.each do |m|%>
+    <p><%= m %></p><br>
+  <%end%>
 <%end%>
 
 <div class="form">

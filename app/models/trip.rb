@@ -1,5 +1,5 @@
 class Trip < ApplicationRecord
-  #belongs_to :user
+  belongs_to :user
   belongs_to :place
   validates :place_name, presence: true
   has_one_attached :image

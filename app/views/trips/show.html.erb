@@ -1,8 +1,11 @@
 <div class='trip-info'>
-<%= image_tag(url_for(@trip.image)) %>
-<h2><%= @trip.place_name %><br></h2>
-<%= @trip.date %><br>
-<%= @trip.details %><br>
-<%= link_to "back", trips_path %>
-<%= button_to "Delete trip", trip_path(@trip), method: :delete, data: { confirm: 'Are you sure?' } %>
+  <% if @trip.image.present? %>
+    <%= image_tag(url_for(@trip.image)) %>
+  <% else %>
+  <% end %>
+  <h2><%= @trip.place_name %><br></h2>
+  <%= @trip.date %><br>
+  <%= @trip.details %><br>
+  <%= link_to "back", trips_path %>
+  <%= button_to "Delete trip", trip_path(@trip), method: :delete, data: { confirm: 'Are you sure?' } %>
 </div>
