@@ -1,9 +1,10 @@
 class PlacesController < ApplicationController
   before_action :require_logged_in
-  
+
   def index
-    @places = Place.all
+    @places = current_user.places
   end
+
 
   def new
     @place = Place.new

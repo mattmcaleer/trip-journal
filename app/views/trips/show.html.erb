@@ -2,6 +2,7 @@
   <% if @trip.image.present? %>
     <%= image_tag(url_for(@trip.image)) %>
   <% else %>
+    <%= image_tag("IMG_2477.jpg") %>
   <% end %>
   <h2><%= @trip.place_name %><br></h2>
   <%= @trip.date %><br>

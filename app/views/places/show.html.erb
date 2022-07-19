@@ -1,1 +1,5 @@
-<%= link_to @place.name, place_path(@place) %>
+<h2><%= @place.name %></h2>
+<% @place.trips.each do |u| %>
+  <li><%= link_to u.user.username, user_path{u.name} %> visited here on <%= u.date %>.</li>
+  <%= u.user.username %>
+<% end %>
