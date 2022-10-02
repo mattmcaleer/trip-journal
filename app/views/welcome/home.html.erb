@@ -1,11 +1,5 @@
-<h2>Hi, <%= @user.username || @user.name %></h2>
+<h2>Hi, <%= @user.username || @user.name %>!</h2>
 <%= link_to 'ADD A TRIP', new_trip_path %>
 <%= form_tag ({controller: 'sessions', action: 'destroy', method: 'post'}) do %>
   <input type=submit value='logout'>
 <% end %>
-
-<h2>Email: <%= @user.email %></h2>
-<h2>GitHub UID: <%= @user.uid %></h2>
-<img src="<%= @user.image %>">
-
-<p><%= @user.id.present? ? @user.id : "n/a" %></p>

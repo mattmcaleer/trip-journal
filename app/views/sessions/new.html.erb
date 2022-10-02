@@ -4,13 +4,14 @@
   <% end %>
 <% end %>
 
-<%= button_to('Log in with GitHub!', '/auth/github', method: :post) %>
-
 <%= form_for @user, url: login_path, method: :post do |f| %>
   <%= f.label :username %>
   <%= f.text_field :username %>
   <%= f.label :password %>
   <%= f.password_field :password %>
   <%= f.submit "log in" %>
-  Or <%= link_to 'sign up', '/users/new' %>
 <% end %>
+
+Or <%= link_to 'Sign Up', '/users/new' %>
+
+<%= button_to('Log in with GitHub!', '/auth/github', method: :post) %>

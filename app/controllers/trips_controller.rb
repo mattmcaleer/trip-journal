@@ -2,7 +2,7 @@ class TripsController < ApplicationController
   before_action :require_logged_in
 
   def index
-    @trips = Trip.where(:user_id => current_user.id)
+    @trips = Trip.current_user_trips(current_user.id)
   end
   
   def new

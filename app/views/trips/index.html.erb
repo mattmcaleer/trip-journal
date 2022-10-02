@@ -1,7 +1,7 @@
 <% @trips.each do |p| %>
   <%= link_to trip_path(p) do %>
     <div class='trip-list-item'>
-      <img class="thumb" <%= p.image.present? ? image_tag(url_for(p.image)) : image_tag("IMG_2477.jpg") %><br>
+      <img class="thumb" <%= p.image.present? ? image_tag(url_for(p.image)) : image_tag("IMG_2477.jpg", class: 'default-image-thumb') %><br>
       <h3 class='trip-list-text'>
       <%= p.place_name ? "#{p.date.strftime("%A %d %b %y")}: #{p.place_name}" : "#{p.date.strftime("%A %d %b %y")}" %><br>
       </h3>
