@@ -9,6 +9,7 @@ gem 'omniauth-github'
 gem 'omniauth-rails_csrf_protection', "~> 1.0"
 gem 'dotenv-rails'
 gem 'net-smtp'
+gem 'net-pop'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'
 gem 'rails', '~> 6.1.6'
